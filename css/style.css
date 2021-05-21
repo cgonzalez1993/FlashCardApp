@@ -1,0 +1,373 @@
+.navBG {
+    background-color: #1D3557;
+}
+
+.navTitle {
+    color: white;
+    font-size: 44px;
+}
+
+.subTitle {
+    font-size: 44px
+}
+
+.navTitle:hover {
+    color: #BAB3B3
+}
+
+.dropDown {
+    color: white;
+    font-size: 22px;
+    background-color: #1D3557;
+}
+
+.dropDown:hover {
+    color: #BAB3B3
+}
+
+.dropDown2 {
+    color: #878282;
+}
+
+.dropdown-item:hover {
+    background-color: #1D3557
+}
+
+.noPadding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.cSharp {
+    background-color: #33007F;
+    width: 100%;
+    padding: 15%;
+    margin: 5px;
+}
+
+.html {
+    background-color: #F55127;
+    width: 100%;
+    padding: 15%;
+    margin: 5px;
+}
+
+.css {
+    background-color: #029AE5;
+    width: 100%;
+    padding: 15%;
+    margin: 5px;
+}
+
+.js {
+    background-color: #F0DB4F;
+    width: 100%;
+    padding: 15%;
+    margin: 5px;
+}
+
+.imgIcon {
+    width: 100%;
+}
+
+.bodyBG {
+    background-color: #EDF2F4;
+}
+
+.progBtn {
+    color: white;
+    background-color: #273A58;
+    font-size: 22px;
+}
+
+/* .cSharpQ {
+    background-color: white;
+    width: 100%;
+    padding: 15%;
+    box-shadow: inset 0 0 0 50px #33007F;
+    margin-left: 5px;
+} */
+
+/* .htmlQ {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    box-shadow: inset 0 0 0 50px #F55127;
+    margin-left: 5px;
+}
+
+.cssQ {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    box-shadow: inset 0 0 0 50px #029AE5;
+    margin-left: 5px;
+}
+
+.jsQ {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    box-shadow: inset 0 0 0 50px #F0DB4F;
+    margin-left: 5px;
+} */
+
+.pTag {
+    font-size: 22px;
+}
+
+@media only screen and (min-width: 320px) {
+    .navTitle {
+        color: white;
+        font-size: 14px;
+    }
+    .dropDown {
+        color: white;
+        font-size: 10px;
+        background-color: #1D3557;
+    }
+    .subTitle {
+        font-size: 20px
+    }
+    .pTag {
+        font-size: 14px;
+    }
+    .cSharpQ {
+        background-color: white;
+        width: 100%;
+        padding: 5%;
+        box-shadow: inset 0 0 0 5px #33007F;
+    }
+    .htmlQ {
+        background-color: white;
+        width: 100%;
+        padding: 5%;
+        box-shadow: inset 0 0 0 5px #F55127;
+    }
+    .cssQ {
+        background-color: white;
+        width: 100%;
+        padding: 5%;
+        box-shadow: inset 0 0 0 5px #029AE5;
+    }
+    .jsQ {
+        background-color: white;
+        width: 100%;
+        padding: 5%;
+        box-shadow: inset 0 0 0 5px #F0DB4F;
+    }
+    .imgIcon {
+        width: 50%;
+        margin-left: 0%;
+    }
+    @media only screen and (min-width: 425px) {
+        .imgIcon {
+            width: 75%;
+            margin-left: 0%;
+        }
+        .navTitle {
+            color: white;
+            font-size: 18px;
+        }
+        .dropDown {
+            color: white;
+            font-size: 12px;
+            background-color: #1D3557;
+        }
+        .subTitle {
+            font-size: 18px
+        }
+        .cSharpQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 15px #33007F;
+        }
+        .htmlQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 15px #F55127;
+        }
+        .cssQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 15px #029AE5;
+        }
+        .jsQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 15px #F0DB4F;
+        }
+        .progBtn {
+            color: white;
+            background-color: #273A58;
+            font-size: 14px;
+        }
+        .pTag {
+            font-size: 14px;
+        }
+    }
+    @media only screen and (min-width: 769px) {
+        .imgIcon {
+            width: 100%;
+            margin-left: 0%;
+        }
+        .navTitle {
+            color: white;
+            font-size: 26px;
+        }
+        .dropDown {
+            color: white;
+            font-size: 18px;
+            background-color: #1D3557;
+        }
+        .subTitle {
+            font-size: 26px
+        }
+        .cSharpQ {
+            background-color: white;
+            width: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 20px #33007F;
+        }
+        .htmlQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 20px #F55127;
+        }
+        .cssQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 20px #029AE5;
+        }
+        .jsQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 20px #F0DB4F;
+        }
+        .progBtn {
+            color: white;
+            background-color: #273A58;
+            font-size: 16px;
+        }
+        .pTag {
+            font-size: 12px;
+        }
+    }
+    @media only screen and (min-width: 876px) {
+        .navTitle {
+            color: white;
+            font-size: 30px;
+        }
+        .dropDown {
+            color: white;
+            font-size: 18px;
+            background-color: #1D3557;
+        }
+        .subTitle {
+            font-size: 30px
+        }
+        .cSharpQ {
+            background-color: white;
+            width: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #33007F;
+        }
+        .htmlQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #F55127;
+        }
+        .cssQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #029AE5;
+        }
+        .jsQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #F0DB4F;
+        }
+        .progBtn {
+            color: white;
+            background-color: #273A58;
+            font-size: 18px;
+        }
+        .pTag {
+            font-size: 14px;
+        }
+        .imgIcon {
+            width: 50%;
+        }
+    }
+    @media only screen and (min-width: 1440px) {
+        .navTitle {
+            color: white;
+            font-size: 44px;
+        }
+        .dropDown {
+            color: white;
+            font-size: 22px;
+            background-color: #1D3557;
+        }
+        .subTitle {
+            font-size: 44px
+        }
+        .cSharpQ {
+            background-color: white;
+            width: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #33007F;
+        }
+        .htmlQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #F55127;
+        }
+        .cssQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #029AE5;
+        }
+        .jsQ {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            padding: 15%;
+            box-shadow: inset 0 0 0 30px #F0DB4F;
+        }
+        .progBtn {
+            color: white;
+            background-color: #273A58;
+            font-size: 22px;
+        }
+        .pTag {
+            font-size: 22px;
+        }
+    }
