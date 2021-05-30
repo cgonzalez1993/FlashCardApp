@@ -21,22 +21,35 @@
         <div class=" d-xs-block d-md-none col-2 order-4 "></div>
 
 
-        <div id="cSharpReveal" class="col-5 px-5 order-5 col-md-6 col-8">
-            <div class=" cSharpQ card text-center">
-                <div class="card-body">
-                    <button type="button" class="btn"><img class="imgIcon" src="../images/cSharpLogo.png"
-                            alt="C# Programming Langauage Logo"></button>
+        <div class="col-5 px-5 order-5 col-md-6 col-8">
+            <div class="image-flip">
+                <div class="mainflip">
+                    <div class="frontside ">
+                        <div class="cSharpQ card">
+                            <div class="card-body ">
+                                <button type="button" class="btn"><img class="imgIcon" src="../images/cSharpLogo.png"
+                                        alt="C# Programming Langauage Logo"></button>
+                                    </div>
+                                    <p class="d-flex justify-content-center">Hover over card to reveal answer</p>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="cSharpQ card">
+                            <div class="card-body">
+                                <p class="pTag" id="cSharpAnswer">Answers go here</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="d-flex justify-content-center">Click to reveal answer</p>
         </div>
         <div class="col-1 order-6 d-md-none col-sm-2"></div>
     </div>
- <div class="row">
+    <div class="row">
         <div class="col-12 d-flex justify-content-center mt-5">
             <button id="cSharpPrevious" type="button"
                 class=" progBtn btn-primary btn-lg mr-5 mt-3 px-4">Previous</button>
-            <button id="cSharpNext" type="button" class="progBtn btn btn-primary btn-lg mt-3 px-5">Next</button>
+            <button id="cSharpNext" type="button" class="progBtn btn btn-primary btn-lg mt-3 px-5 center">Next</button>
         </div>
     </div>
 </div>

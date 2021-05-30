@@ -1,15 +1,3 @@
-let cSharpPrevious = document.getElementById('cSharpPrevious');
-//let cSharpNext = document.getElementById('cSharpNext');
-
-let htmlPrevious = document.getElementById('htmlPrevious');
-let htmlNext = document.getElementById('htmlNext');
-
-let cssPrevious = document.getElementById('cssPrevious');
-let cssNext = document.getElementById('cssNext');
-
-let jsPrevious = document.getElementById('jsPrevious');
-let jsNext = document.getElementById('jsNext');
-
 let url_pt1 = "https://spreadsheets.google.com/feeds/list/";
 let apikey = "1-OGgRhtVb0YfJLCj1ZgZODociO_nLyi3yFSPCgDbeHg";
 let url_pt2 = "/1/public/full?alt=json";
@@ -74,85 +62,142 @@ function loadPage(inject) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-
             if (inject == "../pages/cSharpFlashCards.html") {
+                num = 0;
                 injectHere.innerHTML = this.responseText;
                 let cSharpQuestion = document.getElementById('cSharpQuestion');
-                num = 0;
+                let cSharpAnswer = document.getElementById('cSharpAnswer');
                 setTimeout(function () {
                     cSharpQuestion.innerText = cSharpQArray[num];
+                    cSharpAnswer.innerText = cSharpAnsArray[num];
                 }, 500)
-
-                cSharpReveal = document.getElementById('cSharpReveal');
-                cSharpReveal.addEventListener("click", function () {
-                    loadPage("../pages/cSharpReveal.html");
-                });
                 cSharpNext = document.getElementById('cSharpNext').addEventListener("click", function () {
-                    console.log("Pushed plus 1")
-                    if (count == cSharpQArray.length - 1) {
-                        count = 0;
+                    if (num == cSharpQArray.length - 1) {
+                        num = 0;
                     }
                     else {
-                        count++;
+                        num++;
                     }
                     setTimeout(function () {
                         cSharpQuestion.innerText = cSharpQArray[num];
+                        cSharpAnswer.innerText = cSharpAnsArray[num];
                     }, 500)
                 });
                 cSharpPrevious = document.getElementById('cSharpPrevious').addEventListener("click", function () {
-                    console.log("Pushed minus 1")
-                    if (count == -0) {
-                        count = cSharpQArray.length -1;
+                    if (num == 0) {
+                        num = cSharpQArray.length - 1;
                     }
                     else {
-                        count--;
+                        num--;
                     }
+                    setTimeout(function () {
+                        cSharpQuestion.innerText = cSharpQArray[num];
+                        cSharpAnswer.innerText = cSharpAnsArray[num];
+                    }, 500)
                 });
-
             }
             else if (inject == "../pages/cssFlashCards.html") {
+                num = 0;
                 injectHere.innerHTML = this.responseText;
                 let cssQuestion = document.getElementById('cssQuestion');
-                num = 0;
+                let cssAnswer = document.getElementById('cssAnswer');
                 setTimeout(function () {
                     cssQuestion.innerText = cssQArray[num];
+                    cssAnswer.innerText = cssAnsArray[num];
                 }, 500)
-                
-                cssReveal = document.getElementById('cssReveal');
-                cssReveal.addEventListener("click", function () {
-                    loadPage("../pages/cssReveal.html");
+                cssNext = document.getElementById('cssNext').addEventListener("click", function () {
+                    if (num == cssQArray.length - 1) {
+                        num = 0;
+                    }
+                    else {
+                        num++;
+                    }
+                    setTimeout(function () {
+                        cssQuestion.innerText = cssQArray[num];
+                        cssAnswer.innerText = cssAnsArray[num];
+                    }, 500)
                 });
-
+                cssPrevious = document.getElementById('cssPrevious').addEventListener("click", function () {
+                    if (num == 0) {
+                        num = cssQArray.length - 1;
+                    }
+                    else {
+                        num--;
+                    }
+                    setTimeout(function () {
+                        cssQuestion.innerText = cssQArray[num];
+                        cssAnswer.innerText = cssAnsArray[num];
+                    }, 500)
+                });
             }
             else if (inject == "../pages/htmlFlashCards.html") {
-                injectHere.innerHTML = this.responseText;
-
-                let htmlQuestion = document.getElementById('htmlQuestion');
                 num = 0;
+                injectHere.innerHTML = this.responseText;
+                let htmlQuestion = document.getElementById('htmlQuestion');
+                let htmlAnswer = document.getElementById('htmlAnswer');
                 setTimeout(function () {
                     htmlQuestion.innerText = htmlQArray[num];
+                    htmlAnswer.innerText = htmlAnsArray[num];
                 }, 500)
-
-                htmlReveal = document.getElementById('htmlReveal');
-                htmlReveal.addEventListener("click", function () {
-                    loadPage("../pages/htmlReveal.html");
+                htmlNext = document.getElementById('htmlNext').addEventListener("click", function () {
+                    if (num == htmlQArray.length - 1) {
+                        num = 0;
+                    }
+                    else {
+                        num++;
+                    }
+                    setTimeout(function () {
+                        htmlQuestion.innerText = htmlQArray[num];
+                        htmlAnswer.innerText = htmlAnsArray[num];
+                    }, 500)
                 });
-
+                htmlPrevious = document.getElementById('htmlPrevious').addEventListener("click", function () {
+                    if (num == 0) {
+                        num = htmlQArray.length - 1;
+                    }
+                    else {
+                        num--;
+                    }
+                    setTimeout(function () {
+                        htmlQuestion.innerText = htmlQArray[num];
+                        htmlAnswer.innerText = htmlAnsArray[num];
+                    }, 500)
+                });
             }
             else if (inject == "../pages/jsFlashCards.html") {
-                injectHere.innerHTML = this.responseText;
-
-                let jsQuestion = document.getElementById('jsQuestion');
                 num = 0;
+                injectHere.innerHTML = this.responseText;
+                let jsQuestion = document.getElementById('jsQuestion');
+                let jsAnswer = document.getElementById('jsAnswer');
                 setTimeout(function () {
                     jsQuestion.innerText = jsQArray[num];
+                    jsAnswer.innerText = jsAnsArray[num];
                 }, 500)
 
-                jsReveal = document.getElementById('jsReveal');
-                jsReveal.addEventListener("click", function () {
-                    loadPage("../pages/jsReveal.html");
+                jsNext = document.getElementById('jsNext').addEventListener("click", function () {
+                    if (num == jsQArray.length - 1) {
+                        num = 0;
+                    }
+                    else {
+                        num++;
+                    }
+                    setTimeout(function () {
+                        jsQuestion.innerText = jsQArray[num];
+                        jsAnswer.innerText = jsAnsArray[num];
+                    }, 500)
                 });
-
+                jsPrevious = document.getElementById('jsPrevious').addEventListener("click", function () {
+                    if (num == 0) {
+                        num = jsQArray.length - 1;
+                    }
+                    else {
+                        num--;
+                    }
+                    setTimeout(function () {
+                        jsQuestion.innerText = jsQArray[num];
+                        jsAnswer.innerText = jsAnsArray[num];
+                    }, 500)
+                });
             }
             else if (inject == "./index.html") {
                 resetInject.innerHTML = this.responseText;
@@ -214,36 +259,11 @@ function loadPage(inject) {
                     loadPage("./index.html");
                 });
             }
-            else if (inject == "../pages/cSharpReveal.html") {
-                cSharpReveal.innerHTML = this.responseText;
-                let cSharpAnswer = document.getElementById('cSharpAnswer');
-                num = 0;
-                cSharpAnswer.innerText = cSharpAnsArray[num];
-            }
-            else if (inject == "../pages/htmlReveal.html") {
-                htmlReveal.innerHTML = this.responseText;
-                let htmlAnswer = document.getElementById('htmlAnswer');
-                num = 0;
-                htmlAnswer.innerText = htmlAnsArray[num];
-            }
-            else if (inject == "../pages/cssReveal.html") {
-                cssReveal.innerHTML = this.responseText;
-                let cssAnswer = document.getElementById('cssAnswer');
-                num = 0;
-                cssAnswer.innerText = cssAnsArray[num];
-            }
-            else if (inject == "../pages/jsReveal.html") {
-                jsReveal.innerHTML = this.responseText;
-                let jsAnswer = document.getElementById('jsAnswer');
-                num = 0;
-                jsAnswer.innerText = jsAnsArray[num];
-            }
         }
     };
     xhttp.open("GET", inject, true);
     xhttp.send();
 }
-
 
 //Pull from Google Sheet Url
 function loadQuestions(url) {

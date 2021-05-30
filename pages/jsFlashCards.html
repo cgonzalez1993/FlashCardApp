@@ -23,13 +23,26 @@
 
 
         <div id="jsReveal" class="col-5 px-5 order-5 col-md-6 col-8">
-            <div class=" jsQ card text-center">
-                <div class="card-body">
-                    <button type="button" class="btn"><img class="imgIcon" src="../images/jsLogo.png"
-                            alt="JavaScript Programming Langauage Logo"></button>
+            <div class="image-flip">
+                <div class="mainflip">
+                    <div class="frontside ">
+                        <div class="jsQ card grid">
+                            <div class="card-body ">
+                                <button type="button" class="btn"><img class="imgIcon" src="../images/jsLogo.png"
+                                        alt="js Programming Langauage Logo"></button>
+                            </div>
+                            <p class="d-flex justify-content-center">Hover over card to reveal answer</p>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="jsQ card">
+                            <div class="card-body">
+                                <p class="pTag" id="jsAnswer">Answers go here</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="d-flex justify-content-center">Click to reveal answer</p>
         </div>
         <div class="col-1 order-6 d-md-none col-sm-2"></div>
     </div>

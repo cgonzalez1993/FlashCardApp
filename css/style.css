@@ -2,6 +2,11 @@
     background-color: #1D3557;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+}
+
 .navTitle {
     color: white;
     font-size: 44px;
@@ -80,44 +85,98 @@
     font-size: 22px;
 }
 
-/* .cSharpQ {
-    background-color: white;
-    width: 100%;
-    padding: 15%;
-    box-shadow: inset 0 0 0 50px #33007F;
-    margin-left: 5px;
-} */
-
-/* .htmlQ {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    padding: 15%;
-    box-shadow: inset 0 0 0 50px #F55127;
-    margin-left: 5px;
+.btn {
+    width: 14rem;
+    height: 10rem;
 }
 
-.cssQ {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    padding: 15%;
-    box-shadow: inset 0 0 0 50px #029AE5;
-    margin-left: 5px;
+.grid {
+    display: grid;
+    place-items: center;
 }
-
-.jsQ {
-    background-color: white;
-    width: 100%;
-    height: 100%;
-    padding: 15%;
-    box-shadow: inset 0 0 0 50px #F0DB4F;
-    margin-left: 5px;
-} */
 
 .pTag {
     font-size: 22px;
 }
+
+.card {
+    border-radius: 30px;
+}
+
+.image-flip:hover .backside, .image-flip.hover .backside {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.image-flip:hover .frontside, .image-flip.hover .frontside {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.mainflip {
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.frontside {
+    position: relative;
+    z-index: 2;
+    /* height: 100%; */
+}
+
+.backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+    border-radius: 30px;
+}
+
+.frontside, .backside {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 1s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 1s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 1s;
+    -ms-transform-style: preserve-3d;
+    transition: 1s;
+    transform-style: preserve-3d;
+}
+
+.frontside .card, .backside .card {
+    min-height: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.frontside .card .card-body img {
+    transform: translateX(0%);
+    transform: translateY(40%)
+}
+
 
 @media only screen and (min-width: 320px) {
     .navTitle {
@@ -160,214 +219,265 @@
         box-shadow: inset 0 0 0 5px #F0DB4F;
     }
     .imgIcon {
+        width: 40%;
+        margin-left: -98%;
+    }
+}
+
+@media only screen and (min-width: 350px) {
+    .imgIcon {
+        width: 40%;
+        margin-left: -80%;
+    }
+    .pTag {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    .imgIcon {
+        width: 50%;
+        margin-left: -55%;
+    }
+    .navTitle {
+        color: white;
+        font-size: 18px;
+    }
+    .dropDown {
+        color: white;
+        font-size: 12px;
+        background-color: #1D3557;
+    }
+    .subTitle {
+        font-size: 18px
+    }
+    .cSharpQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 50%;
+        box-shadow: inset 0 0 0 15px #33007F;
+    }
+    .htmlQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 15px #F55127;
+    }
+    .cssQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 15px #029AE5;
+    }
+    .jsQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 15px #F0DB4F;
+    }
+    .progBtn {
+        color: white;
+        background-color: #273A58;
+        font-size: 14px;
+        height: 3rem;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+    }
+    .pTag {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .imgIcon {
+        width: 50%;
+        margin-left: -35%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .imgIcon {
+        width: 50%;
+        margin-left: -20%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .imgIcon {
         width: 50%;
         margin-left: 0%;
     }
-    @media only screen and (min-width: 425px) {
-        .imgIcon {
-            width: 75%;
-            margin-left: 0%;
-        }
-        .navTitle {
-            color: white;
-            font-size: 18px;
-        }
-        .dropDown {
-            color: white;
-            font-size: 12px;
-            background-color: #1D3557;
-        }
-        .subTitle {
-            font-size: 18px
-        }
-        .cSharpQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 15px #33007F;
-        }
-        .htmlQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 15px #F55127;
-        }
-        .cssQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 15px #029AE5;
-        }
-        .jsQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 15px #F0DB4F;
-        }
-        .progBtn {
-            color: white;
-            background-color: #273A58;
-            font-size: 14px;
-        }
-        .pTag {
-            font-size: 14px;
-        }
+}
+
+@media only screen and (min-width: 769px) {
+    .imgIcon {
+        width: 50%;
+        margin-left: -10%;
     }
-    @media only screen and (min-width: 769px) {
-        .imgIcon {
-            width: 100%;
-            margin-left: 0%;
-        }
-        .navTitle {
-            color: white;
-            font-size: 26px;
-        }
-        .dropDown {
-            color: white;
-            font-size: 18px;
-            background-color: #1D3557;
-        }
-        .subTitle {
-            font-size: 26px
-        }
-        .cSharpQ {
-            background-color: white;
-            width: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 20px #33007F;
-        }
-        .htmlQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 20px #F55127;
-        }
-        .cssQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 20px #029AE5;
-        }
-        .jsQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 20px #F0DB4F;
-        }
-        .progBtn {
-            color: white;
-            background-color: #273A58;
-            font-size: 16px;
-        }
-        .pTag {
-            font-size: 12px;
-        }
+    .navTitle {
+        color: white;
+        font-size: 26px;
     }
-    @media only screen and (min-width: 876px) {
-        .navTitle {
-            color: white;
-            font-size: 30px;
-        }
-        .dropDown {
-            color: white;
-            font-size: 18px;
-            background-color: #1D3557;
-        }
-        .subTitle {
-            font-size: 30px
-        }
-        .cSharpQ {
-            background-color: white;
-            width: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #33007F;
-        }
-        .htmlQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #F55127;
-        }
-        .cssQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #029AE5;
-        }
-        .jsQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #F0DB4F;
-        }
-        .progBtn {
-            color: white;
-            background-color: #273A58;
-            font-size: 18px;
-        }
-        .pTag {
-            font-size: 14px;
-        }
-        .imgIcon {
-            width: 50%;
-        }
+    .dropDown {
+        color: white;
+        font-size: 18px;
+        background-color: #1D3557;
     }
-    @media only screen and (min-width: 1440px) {
-        .navTitle {
-            color: white;
-            font-size: 44px;
-        }
-        .dropDown {
-            color: white;
-            font-size: 22px;
-            background-color: #1D3557;
-        }
-        .subTitle {
-            font-size: 44px
-        }
-        .cSharpQ {
-            background-color: white;
-            width: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #33007F;
-        }
-        .htmlQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #F55127;
-        }
-        .cssQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #029AE5;
-        }
-        .jsQ {
-            background-color: white;
-            width: 100%;
-            height: 100%;
-            padding: 15%;
-            box-shadow: inset 0 0 0 30px #F0DB4F;
-        }
-        .progBtn {
-            color: white;
-            background-color: #273A58;
-            font-size: 22px;
-        }
-        .pTag {
-            font-size: 22px;
-        }
+    .subTitle {
+        font-size: 26px
     }
+    .cSharpQ {
+        background-color: white;
+        width: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 20px #33007F;
+    }
+    .htmlQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 20px #F55127;
+    }
+    .cssQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 20px #029AE5;
+    }
+    .jsQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 20px #F0DB4F;
+    }
+    .progBtn {
+        color: white;
+        background-color: #273A58;
+        font-size: 16px;
+    }
+    .pTag {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .imgIcon {
+        width: 50%;
+        margin-left: -20%;
+    }
+}
+
+@media only screen and (min-width: 876px) {
+    .imgIcon {
+        width: 100%;
+        margin-left: 0%;
+    }
+    .navTitle {
+        color: white;
+        font-size: 30px;
+    }
+    .dropDown {
+        color: white;
+        font-size: 18px;
+        background-color: #1D3557;
+    }
+    .subTitle {
+        font-size: 30px
+    }
+    .cSharpQ {
+        background-color: white;
+        width: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #33007F;
+    }
+    .htmlQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #F55127;
+    }
+    .cssQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #029AE5;
+    }
+    .jsQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #F0DB4F;
+    }
+    .progBtn {
+        color: white;
+        background-color: #273A58;
+        font-size: 18px;
+    }
+    .pTag {
+        font-size: 20px;
+    }
+    .imgIcon {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .navTitle {
+        color: white;
+        font-size: 44px;
+    }
+    .dropDown {
+        color: white;
+        font-size: 22px;
+        background-color: #1D3557;
+    }
+    .subTitle {
+        font-size: 44px
+    }
+    .cSharpQ {
+        background-color: white;
+        width: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #33007F;
+    }
+    .htmlQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #F55127;
+    }
+    .cssQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #029AE5;
+    }
+    .jsQ {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        padding: 15%;
+        box-shadow: inset 0 0 0 30px #F0DB4F;
+    }
+    .progBtn {
+        color: white;
+        background-color: #273A58;
+        font-size: 22px;
+    }
+    .pTag {
+        font-size: 24px;
+    }
+}
